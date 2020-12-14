@@ -8,7 +8,7 @@ const target = 2020;
 
 function part1() {
     // 2-6 c: fcpwjqhcgtffzlbj
-    const reg = /^(\d+)\-(\d+) (\w): (\S+)$/
+    const reg = /^(\d+)\-(\d+) (\w): (\S+)$/;
     return input
         .map(x => {
             const [v, min, max, letter, pass] = reg.exec(x);
@@ -22,7 +22,7 @@ function part1() {
 }
 
 function part2() {
-    const reg = /^(\d+)\-(\d+) (\w): (\S+)$/
+    const reg = /^(\d+)\-(\d+) (\w): (\S+)$/;
     return input
         .map(x => {
             const [v, first, second, letter, pass] = reg.exec(x);
@@ -36,7 +36,7 @@ function part2() {
 }
 
 let start = performance.now();
-console.log(`Part 1: [${part1()}]. Time: ${performance.now() - start}`)
+console.log(`Part 1: [${part1()}]. Time: ${performance.now() - start}`);
 
 start = performance.now();
-console.log(`Part 2: [${part2()}]. Time: ${performance.now() - start}`)
+console.log(`Part 2: [${part2()}]. Time: ${performance.now() - start}`);

@@ -10,7 +10,7 @@ function parseRule(rule) {
     // light red bags contain 1 bright white bag, 2 muted yellow bags.
     // dotted black bags contain no other bags.
 
-    const [typeName, otherBagsLine] = rule.split(' bags contain ')
+    const [typeName, otherBagsLine] = rule.split(' bags contain ');
     const otherBags = otherBagsLine.split(',').map(otherBag => {
         otherBag = otherBag.trim();
         if (otherBag === 'no other bags.') {
@@ -45,7 +45,7 @@ function parseRules(input) {
         rules[[rule.typeName]] = {
             typeName: rule.typeName,
             otherBags: rule.otherBags
-        }
+        };
         // rule.type = rules[[rule.typeName]];
     });
 
@@ -59,7 +59,7 @@ function parseRules(input) {
             }
             otherBag.type.parents[[rule.typeName]] = rule;
             return otherBag;
-        })
+        });
     });
 
     return rules;
@@ -86,7 +86,7 @@ function part1CountBagsRec(bag) {
 function part1() {
     const rules = parseRules(input);
 
-    const bagToFind = 'shiny gold'
+    const bagToFind = 'shiny gold';
 
     const bag = rules[[bagToFind]];
     const bags = part1CountBagsRec(bag);
@@ -120,7 +120,7 @@ function part2CountBagsRec(bag) {
 function part2() {
     const rules = parseRules(input);
 
-    const bagToFind = 'shiny gold'
+    const bagToFind = 'shiny gold';
 
     const bag = rules[[bagToFind]];
     const bags = part2CountBagsRec(bag);
@@ -128,7 +128,7 @@ function part2() {
 }
 
 let start = performance.now();
-console.log(`Part 1: [${part1()}]. Time: ${performance.now() - start}`)
+console.log(`Part 1: [${part1()}]. Time: ${performance.now() - start}`);
 
 start = performance.now();
-console.log(`Part 2: [${part2()}]. Time: ${performance.now() - start}`)
+console.log(`Part 2: [${part2()}]. Time: ${performance.now() - start}`);

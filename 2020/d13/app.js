@@ -24,7 +24,7 @@ function part2() {
         const mod = a % m;
         for (let x = 1n; x < m; x++) if ((mod * x) % m == 1) return x;
         return 1;
-    }
+    };
 
     let busTimes = input[1].split(',')
         .map((x, idx) => ({ id: x, pos: idx }))
@@ -49,7 +49,7 @@ function part2() {
 }
 
 let start = performance.now();
-console.log(`Part 1: [${part1()}]. Time: ${performance.now() - start}`)
+console.log(`Part 1: [${part1()}]. Time: ${performance.now() - start}`);
 
 start = performance.now();
-console.log(`Part 2: [${part2()}]. Time: ${performance.now() - start}`)
+console.log(`Part 2: [${part2()}]. Time: ${performance.now() - start}`);

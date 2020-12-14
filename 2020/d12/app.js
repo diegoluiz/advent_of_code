@@ -7,7 +7,7 @@ const input = fs.readFileSync('d12/input.txt', 'utf8').split('\n');
 function part1() {
     const actions = input.map(x => ({ a: x[0], l: parseInt(x.substring(1)) }));
 
-    const dirs = { N: 0, E: 1, S: 2, W: 3 }
+    const dirs = { N: 0, E: 1, S: 2, W: 3 };
     const dirsMap = ['N', 'E', 'S', 'W'];
 
     let d = 'E';
@@ -40,7 +40,7 @@ function part1() {
                 break;
             case 'W':
                 h -= action.l;
-                break
+                break;
         }
 
         history.push({ v, h, d });
@@ -105,7 +105,7 @@ function part2() {
             }
             case 'W': {
                 waypoint.h -= action.l;
-                break
+                break;
             }
         }
 
@@ -119,7 +119,7 @@ function part2() {
 }
 
 let start = performance.now();
-console.log(`Part 1: [${part1()}]. Time: ${performance.now() - start}`)
+console.log(`Part 1: [${part1()}]. Time: ${performance.now() - start}`);
 
 start = performance.now();
-console.log(`Part 2: [${part2()}]. Time: ${performance.now() - start}`)
+console.log(`Part 2: [${part2()}]. Time: ${performance.now() - start}`);

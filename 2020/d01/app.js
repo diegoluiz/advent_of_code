@@ -24,7 +24,7 @@ function part2() {
 
     for (let index = 0; index < input.length; index++) {
         const curr = parseInt(input[index]);
-        nums.push(curr)
+        nums.push(curr);
         map[curr] = 1;
     }
 
@@ -48,7 +48,7 @@ function part2() {
 }
 
 let start = performance.now();
-console.log(`Part 1: [${part1()}]. Time: ${performance.now() - start}`)
+console.log(`Part 1: [${part1()}]. Time: ${performance.now() - start}`);
 
 start = performance.now();
-console.log(`Part 2: [${part2()}]. Time: ${performance.now() - start}`)
+console.log(`Part 2: [${part2()}]. Time: ${performance.now() - start}`);

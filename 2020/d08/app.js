@@ -14,7 +14,7 @@ function part1() {
         const ins = v[0];
         const val = parseInt(v[1]);
 
-        return { ins, val }
+        return { ins, val };
     });
 
     let curr = 0;
@@ -38,10 +38,10 @@ function part1() {
         }
         if (item.ins === jmp) {
             curr += item.val;
-            continue
+            continue;
         }
 
-        console.error('Something went horrible wrong... :( ')
+        console.error('Something went horrible wrong... :( ');
         return null;
     }
 }
@@ -76,10 +76,10 @@ function part2BruteForce(insts) {
         }
         if (item.ins === jmp) {
             curr += item.val;
-            continue
+            continue;
         }
 
-        console.error('Something went horrible wrong... :( ')
+        console.error('Something went horrible wrong... :( ');
         return null;
     }
 }
@@ -90,7 +90,7 @@ function part2() {
         const ins = v[0];
         const val = parseInt(v[1]);
 
-        return { ins, val }
+        return { ins, val };
     });
 
     for (let idx = 0; idx < insts.length; idx++) {
@@ -112,7 +112,7 @@ function part2() {
 }
 
 let start = performance.now();
-console.log(`Part 1: [${part1()}]. Time: ${performance.now() - start}`)
+console.log(`Part 1: [${part1()}]. Time: ${performance.now() - start}`);
 
 start = performance.now();
-console.log(`Part 2: [${part2()}]. Time: ${performance.now() - start}`)
+console.log(`Part 2: [${part2()}]. Time: ${performance.now() - start}`);

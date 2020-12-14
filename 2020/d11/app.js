@@ -23,7 +23,7 @@ const getAdjacentCords = (grid, x, y) => {
     cords.push(y < maxY ? { x: x, y: y + 1, xdrift: 0, ydrift: 1 } : null);
 
     return cords.filter(x => x);
-}
+};
 
 function part1() {
     let grid = input.map(x => x.split(''));
@@ -45,7 +45,7 @@ function part1() {
         }
 
         return doEmpty;
-    }
+    };
 
     while (true) {
         let gridClone = JSON.parse(JSON.stringify(grid));
@@ -114,7 +114,7 @@ function part2() {
         }
 
         return doEmpty;
-    }
+    };
 
     while (true) {
         let gridClone = JSON.parse(JSON.stringify(grid));
@@ -150,7 +150,7 @@ function part2() {
 }
 
 let start = performance.now();
-console.log(`Part 1: [${part1()}]. Time: ${performance.now() - start}`)
+console.log(`Part 1: [${part1()}]. Time: ${performance.now() - start}`);
 
 start = performance.now();
-console.log(`Part 2: [${part2()}]. Time: ${performance.now() - start}`)
+console.log(`Part 2: [${part2()}]. Time: ${performance.now() - start}`);

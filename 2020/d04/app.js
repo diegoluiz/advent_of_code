@@ -114,11 +114,11 @@ function part2() {
                 }
 
                 if (v[2] == 'cm') {
-                    return 150 <= v[1] && v[1] <= 193
+                    return 150 <= v[1] && v[1] <= 193;
                 }
 
                 if (v[2] == 'in') {
-                    return 59 <= v[1] && v[1] <= 76
+                    return 59 <= v[1] && v[1] <= 76;
                 }
 
                 return false;
@@ -153,7 +153,7 @@ function part2() {
             //(Country ID) - ignored, missing or not.
             return true;
         },
-    }
+    };
 
     return passports
         .map(passport => {
@@ -181,7 +181,7 @@ function part2() {
 }
 
 let start = performance.now();
-console.log(`Part 1: [${part1()}]. Time: ${performance.now() - start}`)
+console.log(`Part 1: [${part1()}]. Time: ${performance.now() - start}`);
 
 start = performance.now();
-console.log(`Part 2: [${part2()}]. Time: ${performance.now() - start}`)
+console.log(`Part 2: [${part2()}]. Time: ${performance.now() - start}`);

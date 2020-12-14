@@ -25,7 +25,7 @@ function part1() {
             }
 
             s.add(tnumber);
-        };
+        }
 
         if (!good) {
             return number;
@@ -59,7 +59,7 @@ function part2(invalidNumber) {
 
 let start = performance.now();
 const p1 = part1();
-console.log(`Part 1: [${p1}]. Time: ${performance.now() - start}`)
+console.log(`Part 1: [${p1}]. Time: ${performance.now() - start}`);
 
 start = performance.now();
-console.log(`Part 2: [${part2(p1)}]. Time: ${performance.now() - start}`)
+console.log(`Part 2: [${part2(p1)}]. Time: ${performance.now() - start}`);

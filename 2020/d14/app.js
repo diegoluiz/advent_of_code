@@ -6,7 +6,7 @@ const _ = require('lodash');
 
 String.prototype.replaceAt = function (index, replacement) {
     return this.substr(0, index) + replacement + this.substr(index + replacement.length);
-}
+};
 
 function part1() {
     let mask = '';
@@ -30,7 +30,7 @@ function part1() {
                 continue;
             }
 
-            if (!!value[i]) {
+            if (value[i]) {
                 currValue = currValue.replaceAt(i, value[i]);
             }
         }
@@ -61,8 +61,8 @@ function part2() {
             return [
                 explodeResult(l.replaceAt(i, '1')),
                 explodeResult(l.replaceAt(i, '0')),
-            ]
-        }
+            ];
+        };
 
         return _.flattenDeep(explodeResult(result));
     };
@@ -80,14 +80,14 @@ function part2() {
         const value = parseInt(data[2]);
 
         const memIds = calculateMemIds(mask, memId).map(x => parseInt(x, 2));
-        memIds.forEach(id => { memory[id] = value });
+        memIds.forEach(id => { memory[id] = value; });
     });
 
     return Object.keys(memory).map(key => memory[key]).reduce((p, c) => p + c, 0);
 }
 
 let start = performance.now();
-console.log(`Part 1: [${part1()}]. Time: ${performance.now() - start}`)
+console.log(`Part 1: [${part1()}]. Time: ${performance.now() - start}`);
 
 start = performance.now();
-console.log(`Part 2: [${part2()}]. Time: ${performance.now() - start}`)
+console.log(`Part 2: [${part2()}]. Time: ${performance.now() - start}`);
