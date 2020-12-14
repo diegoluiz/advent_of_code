@@ -9,7 +9,7 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
-        "semi": "always"
+        "semi": 1
     },
     "globals": {
       "require": true,
