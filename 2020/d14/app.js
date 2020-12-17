@@ -17,7 +17,7 @@ function part1() {
             return;
         }
 
-        const data = /^mem\[(\d+)\] \= (\d+)/.exec(line);
+        const data = /^mem\[(\d+)\] = (\d+)/.exec(line);
         const memId = data[1];
         const value = parseInt(data[2]).toString(2).padStart(36, '0');
 
@@ -75,7 +75,7 @@ function part2() {
             return;
         }
 
-        const data = /^mem\[(\d+)\] \= (\d+)/.exec(line);
+        const data = /^mem\[(\d+)\] = (\d+)/.exec(line);
         const memId = data[1];
         const value = parseInt(data[2]);
 

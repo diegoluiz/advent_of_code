@@ -2,7 +2,6 @@ const { performance } = require('perf_hooks');
 
 const fs = require('fs');
 const _ = require('lodash');
-const { group } = require('console');
 const input = fs.readFileSync('d16/input.txt', 'utf8');
 
 function part1() {
@@ -20,7 +19,6 @@ function part1() {
                 };
             })
         ));
-    const myTicket = inputGroups[1].split('\n')[1].split(',').map(x => parseInt(x));
     const nearbyTickets = inputGroups[2].split('\n').splice(1).map(x => x.split(',').map(y => parseInt(y)));
 
     let errorRate = 0;

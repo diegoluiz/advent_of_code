@@ -7,7 +7,7 @@ const dirs = fs.readdirSync('.')
 const start = performance.now();
 dirs.forEach(d => {
     console.log(`Dir: ${d}`);
-    const app = require(`./${d}/app.js`);
+    require(`./${d}/app.js`);
     console.log('');
 });
 

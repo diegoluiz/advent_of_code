@@ -128,7 +128,7 @@ function part2() {
         hcl: (value) => {
             //(Hair Color) - a # followed by exactly six characters 0-9 or a-f.
             try {
-                const reg = /^\#[0-9a-f]{6}$/;
+                const reg = /^#[0-9a-f]{6}$/;
                 return reg.test(value);
             }
             catch { return false; }
@@ -149,7 +149,7 @@ function part2() {
             }
             catch { return false; }
         },
-        cid: (value) => {
+        cid: () => {
             //(Country ID) - ignored, missing or not.
             return true;
         },

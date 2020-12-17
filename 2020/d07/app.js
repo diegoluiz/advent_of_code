@@ -50,7 +50,7 @@ function parseRules(input) {
     });
 
     Object.keys(rules).forEach(key => {
-        rule = rules[key];
+        let rule = rules[key];
 
         rule.otherBags = rule.otherBags.map(otherBag => {
             otherBag.type = rules[[otherBag.typeName]];

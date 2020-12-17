@@ -38,7 +38,8 @@ function part2(invalidNumber) {
 
     let sum = 0;
 
-    for (let i = f = 0; f < numbers.length; f++) {
+    let i = 0;
+    for (let f = 0; f < numbers.length; f++) {
         while (sum > invalidNumber && i < f - 1) {
             sum = sum - numbers[i];
             i++;

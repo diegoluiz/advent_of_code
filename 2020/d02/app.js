@@ -4,14 +4,12 @@ const fs = require('fs');
 
 const input = fs.readFileSync('d02/input.txt', 'utf8').split('\n');
 
-const target = 2020;
-
 function part1() {
     // 2-6 c: fcpwjqhcgtffzlbj
-    const reg = /^(\d+)\-(\d+) (\w): (\S+)$/;
+    const reg = /^(\d+)-(\d+) (\w): (\S+)$/;
     return input
         .map(x => {
-            const [v, min, max, letter, pass] = reg.exec(x);
+            const [, min, max, letter, pass] = reg.exec(x);
             return { min, max, letter, pass };
         })
         .map(item => {
@@ -22,10 +20,10 @@ function part1() {
 }
 
 function part2() {
-    const reg = /^(\d+)\-(\d+) (\w): (\S+)$/;
+    const reg = /^(\d+)-(\d+) (\w): (\S+)$/;
     return input
         .map(x => {
-            const [v, first, second, letter, pass] = reg.exec(x);
+            const [, first, second, letter, pass] = reg.exec(x);
             return { first, second, letter, pass };
         })
         .map(item => {
