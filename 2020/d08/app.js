@@ -1,4 +1,3 @@
-/* eslint-disable no-constant-condition */
 const { performance } = require('perf_hooks');
 
 const fs = require('fs');

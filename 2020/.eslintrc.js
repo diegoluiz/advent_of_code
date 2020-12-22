@@ -9,7 +9,8 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
-        "semi": 1
+        "semi": 1,
+        "no-constant-condition": 0
     },
     "globals": {
       "require": true,
