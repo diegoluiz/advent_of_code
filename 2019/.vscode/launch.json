@@ -5,7 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch",
+            "name": "Node",
+            "program": "${file}",
+            "request": "launch",
+            "type": "pwa-node"
+        },
+        {
+            "name": "Go",
             "type": "go",
             "request": "launch",
             "mode": "auto",
