@@ -1,0 +1,5 @@
+ #rust main binary
+main
+
+#rust output folder
+target/ 
