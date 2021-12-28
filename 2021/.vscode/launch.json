@@ -11,6 +11,14 @@
       "program": "${workspaceFolder}/<your program>",
       "args": [],
       "cwd": "${workspaceFolder}"
-    }
+    },
+    {
+      "name": "(OSX) Launch",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceRoot}/target/debug/aoc_2021",
+      "args": [],
+      "cwd": "${workspaceRoot}",
+  }
   ]
 }
