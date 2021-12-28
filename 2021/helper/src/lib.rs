@@ -22,4 +22,8 @@ pub mod helper {
 
         format!("{}/data/input", curr_dir.to_string())
     }
+
+    pub fn binary_to_isize(s: &str) -> isize {
+        isize::from_str_radix(&s, 2).unwrap()
+    }
 }
