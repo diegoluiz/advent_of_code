@@ -122,7 +122,7 @@ impl helper::Process<ChallengeInput> for Challenge {
         return x.to_string();
     }
 
-    fn part_02(&self, input: &ChallengeInput) -> String {
+    fn part_02(&mut self, input: &ChallengeInput) -> String {
         let lines = input.data.clone();
         let mut hash_map: HashMap<String, i32> = HashMap::new();
 

@@ -45,7 +45,7 @@ impl helper::Process<ChallengeInput> for Challenge {
         fish_times.iter().sum::<usize>().to_string()
     }
 
-    fn part_02(&self, input: &ChallengeInput) -> String {
+    fn part_02(&mut self, input: &ChallengeInput) -> String {
         let fishes = input.data.clone();
         let mut days = 256;
     

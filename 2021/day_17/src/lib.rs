@@ -72,7 +72,7 @@ impl helper::Process<ChallengeInput> for Challenge {
         y_pos.to_string()
     }
 
-    fn part_02(&self, input: &ChallengeInput) -> String {
+    fn part_02(&mut self, input: &ChallengeInput) -> String {
         let y = input.data.1.clone();
         let x = input.data.0.clone();
 

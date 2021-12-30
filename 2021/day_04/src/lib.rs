@@ -115,7 +115,7 @@ impl helper::Process<ChallengeInput> for Challenge {
         return 0.to_string();
     }
 
-    fn part_02(&self, input: &ChallengeInput) -> String {
+    fn part_02(&mut self, input: &ChallengeInput) -> String {
         let drawn_numbers = input.data.0.clone();
         let mut boards = input.data.1.clone();
 

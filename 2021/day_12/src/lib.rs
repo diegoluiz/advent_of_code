@@ -147,7 +147,7 @@ impl helper::Process<ChallengeInput> for Challenge {
         bfs_rec_p1(&start, &graph, &mut visited, String::from("start")).to_string()
     }
 
-    fn part_02(&self, input: &ChallengeInput) -> String {
+    fn part_02(&mut self, input: &ChallengeInput) -> String {
         let entries = input.data.clone();
         let graph = get_graph(&entries);
 

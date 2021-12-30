@@ -8,7 +8,7 @@ pub mod helper {
     pub fn load_input(path: String) -> String {
         // println!("Loading {}", path);
         let mut data = String::new();
-        let mut f = File::open(path).expect("Unable to open file");
+        let mut f = File::open(&path).expect(format!("Unable to open file: {}", &path).as_str());
         f.read_to_string(&mut data).expect("Unable to read string");
         return data;
     }
@@ -30,8 +30,8 @@ pub mod helper {
         fn challenge_name(&self) -> String;
         fn load_input(&self, base_dir: String, is_sample_input: bool) -> T;
         fn part_01(&self, input: &T) -> String;
-        fn part_02(&self, input: &T) -> String;
-        fn process(&self, is_sample_input: bool) {
+        fn part_02(&mut self, input: &T) -> String;
+        fn process(&mut self, is_sample_input: bool) {
             let now = Instant::now();
 
             println!("{}:", self.challenge_name());

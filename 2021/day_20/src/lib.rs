@@ -135,7 +135,7 @@ impl helper::Process<ChallengeInput> for Challenge {
         process(2, input)
     }
 
-    fn part_02(&self, input: &ChallengeInput) -> String {
+    fn part_02(&mut self, input: &ChallengeInput) -> String {
         let input = input.data.clone();
         process(50, input)
     }

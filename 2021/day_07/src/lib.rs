@@ -38,7 +38,7 @@ impl helper::Process<ChallengeInput> for Challenge {
         fuel.to_string()
     }
 
-    fn part_02(&self, input: &ChallengeInput) -> String {
+    fn part_02(&mut self, input: &ChallengeInput) -> String {
         let crabs = input.data.clone();
         let mut min_fuel = i32::MAX;
         let start = crabs.first().unwrap();

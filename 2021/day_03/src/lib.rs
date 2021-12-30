@@ -60,7 +60,7 @@ impl helper::Process<ChallengeInput> for Challenge {
         return (gama_rate * epsilon_rate).to_string();
     }
 
-    fn part_02(&self, input: &ChallengeInput) -> String {
+    fn part_02(&mut self, input: &ChallengeInput) -> String {
         let lines = input.data.clone();
         let mut o2_ratings = lines.clone();
         let mut co2_ratings = lines.clone();

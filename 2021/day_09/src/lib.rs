@@ -99,7 +99,7 @@ impl helper::Process<ChallengeInput> for Challenge {
         local_mins.iter().sum::<i32>().to_string()
     }
 
-    fn part_02(&self, input: &ChallengeInput) -> String {
+    fn part_02(&mut self, input: &ChallengeInput) -> String {
         let entries = input.data.clone();
 
         let mut local_mins: Vec<(i32, i32)> = Vec::new();

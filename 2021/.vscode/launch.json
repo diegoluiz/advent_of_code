@@ -19,6 +19,7 @@
       "program": "${workspaceRoot}/target/debug/aoc_2021",
       "args": [],
       "cwd": "${workspaceRoot}",
+      "preLaunchTask":"${defaultBuildTask}"
   }
   ]
 }

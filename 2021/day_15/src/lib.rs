@@ -99,7 +99,7 @@ impl helper::Process<ChallengeInput> for Challenge {
         process(&nodes)
     }
 
-    fn part_02(&self, input: &ChallengeInput) -> String {
+    fn part_02(&mut self, input: &ChallengeInput) -> String {
         let nodes = input.data.clone();
         let mut max_nodes = nodes.clone();
 

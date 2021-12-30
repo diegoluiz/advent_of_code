@@ -98,7 +98,7 @@ impl helper::Process<ChallengeInput> for Challenge {
         process(10, &template, &rules)
     }
 
-    fn part_02(&self, input: &ChallengeInput) -> String {
+    fn part_02(&mut self, input: &ChallengeInput) -> String {
         let template = input.data.0.clone();
         let rules = input.data.1.clone();
         process(40, &template, &rules)
