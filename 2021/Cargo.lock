@@ -36,6 +36,7 @@ dependencies = [
  "day_19",
  "day_20",
  "day_21",
+ "day_22",
  "helper",
  "itertools",
  "regex",
@@ -194,6 +195,15 @@ dependencies = [
 
 [[package]]
 name = "day_21"
+version = "0.1.0"
+dependencies = [
+ "helper",
+ "itertools",
+ "regex",
+]
+
+[[package]]
+name = "day_22"
 version = "0.1.0"
 dependencies = [
  "helper",

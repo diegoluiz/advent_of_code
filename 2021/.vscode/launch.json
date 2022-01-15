@@ -18,6 +18,9 @@
       "request": "launch",
       "program": "${workspaceRoot}/target/debug/aoc_2021",
       "args": [],
+      "env": {
+        "RUST_BACKTRACE": "1"
+      },
       "cwd": "${workspaceRoot}",
       "preLaunchTask":"${defaultBuildTask}"
   }

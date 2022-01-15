@@ -25,6 +25,7 @@ fn main() {
     let mut d19 = day_19::Challenge {};
     let mut d20 = day_20::Challenge {};
     let mut d21 = day_21::Challenge::new();
+    let mut d22 = day_22::Challenge::new();
 
     let now = Instant::now();
     println!("Starting challenges");
@@ -50,6 +51,7 @@ fn main() {
     d19.process(is_sample);
     d20.process(is_sample);
     d21.process(is_sample);
+    d22.process(is_sample);
 
     println!("Done in {} milliseconds", now.elapsed().as_millis());
 }
