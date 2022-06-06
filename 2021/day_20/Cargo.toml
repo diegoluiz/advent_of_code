@@ -8,4 +8,4 @@ edition = "2021"
 [dependencies]
 helper = { path = "../helper" }
 itertools = "0.10.3"
-regex = "1.5.4"
+regex = "1.5.5"
