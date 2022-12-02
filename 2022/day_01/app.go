@@ -1,6 +1,7 @@
 package day_01
 
 import (
+	h "advent_of_code/2022/helpers"
 	"fmt"
 	"os"
 	"sort"
@@ -8,10 +9,11 @@ import (
 	"strings"
 )
 
-func Run() {
+var day string = "01"
 
-	fmt.Printf("day 01\n")
-	lines, _ := os.ReadFile("./day_01/data/input.txt")
+func Run() {
+	defer h.EndDay(h.StartDay(day))
+	lines, _ := os.ReadFile("./day_" + day + "/data/input.txt")
 	input := string(lines)
 
 	elves_foods := strings.Split(input, "\n\n")
@@ -32,5 +34,5 @@ func Run() {
 
 	sort.Ints(total_cals)
 
-	fmt.Printf("p1: (%v) p2: (%v)\n", total_cals[l-1], (total_cals[l-1] + total_cals[l-2] + total_cals[l-3]))
+	fmt.Printf(" - p1: [%v]\n - p2: [%v]\n", total_cals[l-1], (total_cals[l-1] + total_cals[l-2] + total_cals[l-3]))
 }

@@ -3,14 +3,13 @@ package main
 import (
 	"advent_of_code/2022/day_01"
 	"advent_of_code/2022/day_02"
-	"fmt"
+	h "advent_of_code/2022/helpers"
 )
 
 func main() {
-	fmt.Printf("Running 2022 challenges\n")
+	defer h.End(h.Start())
 
 	day_01.Run()
 	day_02.Run()
 
-	fmt.Printf("Finished")
 }

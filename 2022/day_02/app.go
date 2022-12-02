@@ -1,10 +1,13 @@
 package day_02
 
 import (
+	h "advent_of_code/2022/helpers"
 	"fmt"
 	"os"
 	"strings"
 )
+
+var day string = "02"
 
 type HandShape int
 
@@ -87,8 +90,8 @@ func Game(op HandShape, me HandShape) GameResult {
 }
 
 func Run() {
-	fmt.Printf("day 02\n")
-	lines, _ := os.ReadFile("./day_02/data/input.txt")
+	defer h.EndDay(h.StartDay(day))
+	lines, _ := os.ReadFile("./day_" + day + "/data/input.txt")
 	input := string(lines)
 
 	games := strings.Split(input, "\n")
@@ -124,5 +127,5 @@ func Run() {
 		points_p2 += int(me) + 1
 	}
 
-	fmt.Printf("p1: (%v) p2: (%v)\n", points_p1, points_p2)
+	fmt.Printf(" - p1: [%v]\n - p2: [%v]\n", points_p1, points_p2)
 }
