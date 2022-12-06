@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-var day string = "01"
+var day = "01"
 
 func Run() {
 	defer h.EndDay(h.StartDay(day))

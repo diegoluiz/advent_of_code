@@ -1,4 +1,4 @@
-package template
+package day_0x
 
 import (
 	h "advent_of_code/2022/helpers"
@@ -6,14 +6,16 @@ import (
 	"os"
 )
 
-var day string = "xx"
+var day = "0x"
 
 func Run() {
 	defer h.EndDay(h.StartDay(day))
-	lines, _ := os.ReadFile("./" + day + "/data/input.txt")
+	lines, _ := os.ReadFile("./day_" + day + "/data/input.txt")
 	input := string(lines)
 
-	p1 := len(input)
-	p2 := len(input)
-	fmt.Printf(" - p1: [%v]\n - p2: [%v]\n", p1, p2)
+	print(input)
+	points_p1 := 0
+	points_p2 := 0
+
+	fmt.Printf(" - p1: [%v]\n - p2: [%v]\n", points_p1, points_p2)
 }

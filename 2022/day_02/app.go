@@ -7,8 +7,6 @@ import (
 	"strings"
 )
 
-var day string = "02"
-
 type HandShape int
 
 const (
@@ -88,6 +86,8 @@ func Game(op HandShape, me HandShape) GameResult {
 
 	return Tie
 }
+
+var day = "02"
 
 func Run() {
 	defer h.EndDay(h.StartDay(day))

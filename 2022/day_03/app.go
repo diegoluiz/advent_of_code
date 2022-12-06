@@ -46,9 +46,11 @@ func get_set(str string) map[rune]bool {
 	return m
 }
 
+var day = "03"
+
 func Run() {
-	defer h.EndDay(h.StartDay("03"))
-	lines, _ := os.ReadFile("./day_03/data/input.txt")
+	defer h.EndDay(h.StartDay(day))
+	lines, _ := os.ReadFile("./day_" + day + "/data/input.txt")
 	input := string(lines)
 
 	rucksacks := strings.Split(input, "\n")
