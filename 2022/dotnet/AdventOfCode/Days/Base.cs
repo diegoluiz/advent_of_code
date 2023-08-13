@@ -1,25 +1,27 @@
 namespace AdventOfCode.Days;
 
 public abstract class DayBase {
-    protected object _part1Buffer;
+    protected object? _part1Buffer;
 
-    public abstract string Name { get; }
+    public string? Name { get; private set; }
 
     public void Process(){
-        Console.WriteLine($"Processing day {this.Name}");
+        Name = GetType().Name;
+
+        Console.WriteLine($"Processing day {Name}");
         var input  = LoadInput();
         var output = Part01(input);
-        System.Console.WriteLine(output);
+        Console.WriteLine(output);
         
         output = Part02(input);
-        System.Console.WriteLine(output);
+        Console.WriteLine(output);
 
     }
 
     protected string LoadInput() {
         var curr = Directory.GetCurrentDirectory();
         var inputPath = Path.Join(curr, "inputs");
-        var currDayInput = Path.Join(inputPath, $"{this.GetType().Name}.txt");
+        var currDayInput = Path.Join(inputPath, $"{Name}.txt");
         var input = File.ReadAllText(currDayInput);
         return input;
     }

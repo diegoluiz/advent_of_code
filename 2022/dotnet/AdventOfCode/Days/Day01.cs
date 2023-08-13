@@ -2,8 +2,6 @@ namespace AdventOfCode.Days;
 
 public class Day01 : DayBase
 {
-    public override string Name => "Day 01";
-
     protected override string Part01(string input)
     {
         var elvensCals = input.Split("\n\n").Select(x => {
