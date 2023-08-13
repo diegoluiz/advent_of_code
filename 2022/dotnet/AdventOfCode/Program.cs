@@ -7,6 +7,7 @@ public class Solution {
         var days = new List<DayBase> {
             new Day01(),
             new Day02(),
+            new Day03(),
         };
 
         Console.WriteLine($"Starting {days.Count}");
