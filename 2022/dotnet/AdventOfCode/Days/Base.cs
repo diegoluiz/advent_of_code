@@ -1,24 +1,32 @@
+using System.Diagnostics;
+
 namespace AdventOfCode.Days;
 
-public abstract class DayBase {
+public abstract class DayBase
+{
     protected object? _part1Buffer;
 
     public string? Name { get; private set; }
 
-    public void Process(){
+    public void Process()
+    {
         Name = GetType().Name;
 
-        Console.WriteLine($"Processing day {Name}");
-        var input  = LoadInput();
-        var output = Part01(input);
-        Console.WriteLine(output);
-        
-        output = Part02(input);
-        Console.WriteLine(output);
+        var sw = new Stopwatch();
+        sw.Start();
 
+        var input = LoadInput();
+        var p1output = Part01(input);
+
+        var p2output = Part02(input);
+
+        Console.WriteLine($"Processed day {Name} in {sw.Elapsed.TotalNanoseconds} nanosec");
+        Console.WriteLine($" - {p1output}");
+        Console.WriteLine($" - {p2output}");
     }
 
-    protected string LoadInput() {
+    protected string LoadInput()
+    {
         var curr = Directory.GetCurrentDirectory();
         var inputPath = Path.Join(curr, "inputs");
         var currDayInput = Path.Join(inputPath, $"{Name}.txt");
